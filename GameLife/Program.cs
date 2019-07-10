@@ -6,7 +6,7 @@ namespace GameLife
     {
         static void Main(string[] args)
         {
-            Game g = new Game(5,5);
+            Game g = new Game(10,10);
         }
     }
 }

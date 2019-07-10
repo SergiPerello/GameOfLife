@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GameLife.Interfaces
 {
-    interface IProcess
+    public interface IProcess
     {
     }
 }

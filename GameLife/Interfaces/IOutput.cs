@@ -4,7 +4,8 @@ using System.Text;
 
 namespace GameLife.Interfaces
 {
-    interface IOutput
+    public interface IOutput
     {
+        void DisplayBoard(Cell[,] Board, char AliveSymbol, char DeadSymbol);
     }
 }

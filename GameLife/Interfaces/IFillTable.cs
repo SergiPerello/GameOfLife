@@ -4,8 +4,8 @@ using System.Text;
 
 namespace GameLife.Interfaces
 {
-    internal interface IFillTable
+    public interface IFillTable
     {
-        void FillTable();
+        void FillTable(Cell[,] Board);
     }
 }

@@ -4,12 +4,13 @@ using System.Text;
 
 namespace GameLife
 {
-    class Cell
+    public class Cell
     {
-        public bool alive { get; set; }
+        List<Cell> Neighbours;
+        public bool Alive { get; set; }
         public Cell(bool alive)
         {
-            this.alive = alive;
+            this.Alive = alive;
         }
     }
 }

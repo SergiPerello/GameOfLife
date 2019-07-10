@@ -7,16 +7,13 @@ namespace GameLife
 {
     class RandomFill : IFillTable
     {
-        public void FillTable(int rows, int cols)
+        public void FillTable(Cell[,] Board)
         {
-            for (int i = 0; i < rows; i++)
-            {
-                for (int j = 0; j < cols; j++)
-                {
-                    
-                }
-            }
+            for (int i = 0; i < Board.GetLength(0); i++)
+                for (int j = 0; j < Board.GetLength(1); j++)
+                    Board[i, j] = new Cell(GetRandomBoolean());
         }
+
         public static bool GetRandomBoolean()
         {
             return new Random().Next(100) % 2 == 0;

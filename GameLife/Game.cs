@@ -1,27 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using GameLife.Interfaces;
 
 namespace GameLife
 {
     class Game
     {
-        Cell[,] array;
-
-        public Game(int X, int Y)
+        Cell[,] Board;
+        IFillTable FillTable;
+        IOutput Output;
+        public Game(int BoardDimensionX, int BoardDimensionY)
         {
-            array = new Cell[X, Y];
+            Board = new Cell[BoardDimensionX, BoardDimensionY];
+            new RandomFill().FillTable(Board);
+            new CLIDisplay().DisplayBoard(Board,'■','.');
         }
 
-        void initialize()
-        {
-            for (int i = 0; i < array.GetLength(0);i++)
-            {
-                for (int j = 0; i< array.GetLength(1); j++)
-                {
-
-                }
-            }
-        }
     }
 }
